@@ -71,10 +71,6 @@ async def spoon(ctx):
 
 @bot.command()
 async def resources(ctx):
-    embed_done = discord.Embed(
-        title="Sent, please check your DMs!",
-        color=0x4bc6aa
-    )
     tut_message = """
 <https://community.tribot.org/topic/6644-a-simple-tutorial-to-hashmaps/> - Tutorial on practical implementation of HashMap's in scripts
 
@@ -123,9 +119,8 @@ async def resources(ctx):
 
     <https://dreambot.org/forums/index.php?/topic/10490-configlistener/> ConfigListener (Basically varbits, so you can apply the same thing to varbits)
         """
-    await ctx.message.author.send(tut_message)
-    await ctx.message.author.send(tut_message2)
-    await ctx.send(embed_done)
+    await ctx.messagesend(tut_message)
+    await ctx.messagesend(tut_message2)
 
 
 bot.run("ODI1NDk1MTM1MzYxODI2ODg2.YF-wQQ.845G47anM2Kp2yA5GcvspSsjZh4")
