@@ -68,8 +68,8 @@ async def spoon(ctx):
     message = "We aren't going to spoonfeed you answers and you shouldn't expect that. We're here to help, not to hold your hand through writing your scripts"
     await ctx.send(message)
 
+
 @bot.command()
-@commands.has_role('Owner')
 async def resources(ctx, message):
     tut_message = """
         <https://community.tribot.org/topic/6644-a-simple-tutorial-to-hashmaps/> - Tutorial on practical implementation of HashMap's in scripts
@@ -119,6 +119,9 @@ async def resources(ctx, message):
 
             <https://dreambot.org/forums/index.php?/topic/10490-configlistener/> ConfigListener (Basically varbits, so you can apply the same thing to varbits)
                 """
-    await ctx.send(tut_message)
-    await ctx.send(tut_message2)
+    if message.member.roles.cache.has(792919704158994452):
+        await ctx.send(tut_message)
+        await ctx.send(tut_message2)
+
+
 bot.run("ODI1NDk1MTM1MzYxODI2ODg2.YF-wQQ.845G47anM2Kp2yA5GcvspSsjZh4")
