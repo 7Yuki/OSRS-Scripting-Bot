@@ -69,58 +69,63 @@ async def spoon(ctx):
     await ctx.send(message)
 
 
-@bot.command()
-async def resources(ctx):
+
+
+@bot.event
+async def on_message(ctx,message):
     tut_message = """
-<https://community.tribot.org/topic/6644-a-simple-tutorial-to-hashmaps/> - Tutorial on practical implementation of HashMap's in scripts
+    <https://community.tribot.org/topic/6644-a-simple-tutorial-to-hashmaps/> - Tutorial on practical implementation of HashMap's in scripts
 
-<https://explv.github.io/?centreX=3108&centreY=3321&centreZ=0&zoom=7> Explv's map for finding area's and tiles
+    <https://explv.github.io/?centreX=3108&centreY=3321&centreZ=0&zoom=7> Explv's map for finding area's and tiles
 
-<https://www.osrsbox.com/tools/> Tool for finding NPC or object ID's
+    <https://www.osrsbox.com/tools/> Tool for finding NPC or object ID's
 
-<https://app.diagrams.net/?> good for planning out how your scripts should work logically :smile:
+    <https://app.diagrams.net/?> good for planning out how your scripts should work logically :smile:
 
-<https://youtube.com/channel/UCCDS_ii2C6nTXs9Y2E_YIyA> pretty cool channel, it's for Dreambot but you can take the concepts he shows and apply them to basically any botting client
+    <https://youtube.com/channel/UCCDS_ii2C6nTXs9Y2E_YIyA> pretty cool channel, it's for Dreambot but you can take the concepts he shows and apply them to basically any botting client
 
-<https://dreambot.org/forums/index.php?/topic/20611-how-to-create-custom-listeners/> this is for Dreambot but you can probably apply a lot of it to other clients
+    <https://dreambot.org/forums/index.php?/topic/20611-how-to-create-custom-listeners/> this is for Dreambot but you can probably apply a lot of it to other clients
 
-<https://dreambot.org/forums/index.php?/topic/2910-a-pug-tutorial-all-about-making-the-best-paint/> some of these can be applied to other clients :smile:
+    <https://dreambot.org/forums/index.php?/topic/2910-a-pug-tutorial-all-about-making-the-best-paint/> some of these can be applied to other clients :smile:
 
-<https://dreambot.org/forums/index.php?/topic/4510-easily-saveload-script-settings/> if you want to have script settings using a GUI :smile:
+    <https://dreambot.org/forums/index.php?/topic/4510-easily-saveload-script-settings/> if you want to have script settings using a GUI :smile:
 
-<https://discourse.rspeer.org/t/how-to-implement-script-arguments-into-a-script-with-jcommander/3791> implement cli into your scripts :)
+    <https://discourse.rspeer.org/t/how-to-implement-script-arguments-into-a-script-with-jcommander/3791> implement cli into your scripts :)
 
-<https://community.tribot.org/topic/38966-efficient-scripting/> - Some good ways to learn how to structure your code
+    <https://community.tribot.org/topic/38966-efficient-scripting/> - Some good ways to learn how to structure your code
 
-<https://osbot.org/forum/topic/91620-tutorial-decorating-entities-an-alternative-to-static-libraries> pretty nice :)
+    <https://osbot.org/forum/topic/91620-tutorial-decorating-entities-an-alternative-to-static-libraries> pretty nice :)
 
-<https://osbot.org/forum/topic/155701-tutorial-make-your-script-send-discord-messages> if your client doesn't have a discord api
+    <https://osbot.org/forum/topic/155701-tutorial-make-your-script-send-discord-messages> if your client doesn't have a discord api
 
-<https://osbot.org/forum/topic/157464-tutorial-push-notifications-using-telegram-example-code-and-more> meh, if you have Telegram then ig it would be nice
+    <https://osbot.org/forum/topic/157464-tutorial-push-notifications-using-telegram-example-code-and-more> meh, if you have Telegram then ig it would be nice
 
-<https://osbot.org/forum/topic/81168-improved-interact> this is on OSBot but can be applied to other clients very easily
+    <https://osbot.org/forum/topic/81168-improved-interact> this is on OSBot but can be applied to other clients very easily
 
-<https://osbot.org/forum/topic/41900-beginners-guide-to-separating-classes> for the noobies :)
-"""
+    <https://osbot.org/forum/topic/41900-beginners-guide-to-separating-classes> for the noobies :)
+    """
     tut_message2 = """
-    <https://community.tribot.org/topic/65825-tutorial-singleton-pattern/> kinda nice to know stuff about singleton's :)
+        <https://community.tribot.org/topic/65825-tutorial-singleton-pattern/> kinda nice to know stuff about singleton's :)
 
-    <https://community.tribot.org/topic/79682-proper-banking-add-randomization-and-real-success-checks/> eh, seems a bit pointless but to each their own
+        <https://community.tribot.org/topic/79682-proper-banking-add-randomization-and-real-success-checks/> eh, seems a bit pointless but to each their own
 
-    <https://osbot.org/forum/topic/91620-tutorial-decorating-entities-an-alternative-to-static-libraries/> actually really useful
+        <https://osbot.org/forum/topic/91620-tutorial-decorating-entities-an-alternative-to-static-libraries/> actually really useful
 
-    <https://osbot.org/forum/topic/163538-snippet-getting-item-prices/> if your client doesn't have a native way of getting GE prices for an item :smile:
+        <https://osbot.org/forum/topic/163538-snippet-getting-item-prices/> if your client doesn't have a native way of getting GE prices for an item :smile:
 
-    <https://dreambot.org/forums/index.php?/topic/5791-java-tutorial-series/>
+        <https://dreambot.org/forums/index.php?/topic/5791-java-tutorial-series/>
 
-    <https://dreambot.org/forums/index.php?/topic/17883-edu-basic-scripting-all-you-need-to-start-coding/>
+        <https://dreambot.org/forums/index.php?/topic/17883-edu-basic-scripting-all-you-need-to-start-coding/>
 
-    <https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices> very recent addition that just recently happened afaik :smile: enjoy!
+        <https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices> very recent addition that just recently happened afaik :smile: enjoy!
 
-    <https://dreambot.org/forums/index.php?/topic/10490-configlistener/> ConfigListener (Basically varbits, so you can apply the same thing to varbits)
-        """
+        <https://dreambot.org/forums/index.php?/topic/10490-configlistener/> ConfigListener (Basically varbits, so you can apply the same thing to varbits)
+            """
     await ctx.send(tut_message)
     await ctx.send(tut_message2)
-
-
+    channels = ["osrs-resources", "bot-testing"]
+    if message.channel in channels:
+        if message.content.find(".resoruces") != -1:
+            await ctx.send(tut_message)
+            await ctx.send(tut_message2)
 bot.run("ODI1NDk1MTM1MzYxODI2ODg2.YF-wQQ.845G47anM2Kp2yA5GcvspSsjZh4")
