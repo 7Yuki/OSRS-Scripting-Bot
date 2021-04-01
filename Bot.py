@@ -70,7 +70,11 @@ async def spoon(ctx):
 
 
 @bot.command()
-async def osrs(ctx):
+async def resources(ctx):
+    embed_done = discord.Embed(
+        title="Sent, please check your DMs!",
+        color=0x4bc6aa
+    )
     tut_message = """
 <https://community.tribot.org/topic/6644-a-simple-tutorial-to-hashmaps/> - Tutorial on practical implementation of HashMap's in scripts
 
@@ -121,6 +125,7 @@ async def osrs(ctx):
         """
     await ctx.message.author.send(tut_message)
     await ctx.message.author.send(tut_message2)
+    await ctx.send(embed_done)
 
 
 bot.run("ODI1NDk1MTM1MzYxODI2ODg2.YF-wQQ.845G47anM2Kp2yA5GcvspSsjZh4")
