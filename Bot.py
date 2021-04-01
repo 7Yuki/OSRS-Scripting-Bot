@@ -126,6 +126,6 @@ async def on_message(ctx,message):
     channels = ["osrs-resources", "bot-testing"]
     if message.channel in channels:
         if message.content.find(".resoruces") != -1:
-            await ctx.send(tut_message)
-            await ctx.send(tut_message2)
+            await message.channel.send(tut_message)
+            await message.channel.send(tut_message2)
 bot.run("ODI1NDk1MTM1MzYxODI2ODg2.YF-wQQ.845G47anM2Kp2yA5GcvspSsjZh4")
