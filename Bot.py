@@ -111,7 +111,8 @@ https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices very recent additi
 
 https://dreambot.org/forums/index.php?/topic/10490-configlistener/ ConfigListener (Basically varbits, so you can apply the same thing to varbits)
     """
-    await ctx.message.author.send(message, message2)
+    await ctx.message.author.send(message)
+    await ctx.message.author.send(message2)
     await ctx.message.author.send("Enjoy the resources - smile")
 
 
