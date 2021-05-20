@@ -68,6 +68,26 @@ async def spoon(ctx):
     message = "We aren't going to spoonfeed you answers and you shouldn't expect that. We're here to help, not to hold your hand through writing your scripts"
     await ctx.send(message)
 
+@bot.command()
+async def antiban(ctx):
+    message ="""
+    “Antiban” is a farce. What could you possibly think would make a bot resistant to bans?
+
+Random mouse movements? Opening tabs and hovering skills? Moving your mouse off screen?
+
+None of these actions are “antiban”. If you want to reduce your risk of getting banned, quit botting 24/7 and quit botting the same thing with the same bot day to day.
+
+The only thing you can realistically expect from your bot authors is to write a stable bot that is robust enough not to get stuck regardless of the circumstances.
+
+Stop asking for stupid fucking shit like “antiban”. It isn’t real. The stereotypical “antiban” users ask for is a predefined set of actions that are pseudorandomly selected at pseudorandom intervals. And guess what? This is predictable at a certain threshold.
+
+Pseudo random number generators, which are used for these pseudorandom intervals use a deterministic algorithm for generating numbers and as the sample size increase both in duration and quantity (bot usage and user count), you can observe the overall trend of performing these “random” “antiban” actions. So quit asking for it.
+
+The depth of complexity required for writing a bot with divergent playstyles is over the head of pretty much every bot author in the entire scene. And it’s also impractical. You’d have to implement machine learning algorithms that ultimately slowly achieve the goal of performing the action correctly and at an optimal speed. This period of poor performance while the bot is literally learning how to perform the action is something the user does not want to be involved in. So bot authors have written predefined logic for handling a specific set of actions a single way and it just works.
+
+tl;dr: “antiban” doesn’t exist. People who ask for it are mentally retarded. Literally deluded. Quit botting all the time and expecting a bot to avoid bans for you. Be realistic and bot occasionally
+    """
+
 
 @bot.command()
 @commands.has_role("Owner")
